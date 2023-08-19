@@ -1,1 +1,0 @@
-# mactel_segmentation
