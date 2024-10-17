@@ -6,6 +6,8 @@
 
 #### data_collection_creation.ipynb creates all the data: the input data, the ground truths, as well as the images used to evaluate the baseline Heidelberg auto model
 
+#### call_cps.py is a  file I made that generates a prediction for a list of images and masks using the top model (CPS+CutMix trained on 100% of unlabeled data)
+
 #### train_standard_unet.py is the training loop used to train the standard unet
 #### train_double_unet.py is the training loop used to train the double unet
 #### train_semi_seg/train.py is the training loop used to train the SemiSupervised model, see:
