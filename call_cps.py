@@ -14,9 +14,10 @@ import os
 
 # imgs should be 512 x 512
 
+cps_save_path = "./TorchSemiSeg/snapshot/snapshot/epoch-last.pth"
+pretrained_model_path = "./TorchSemiSeg/DATA/pytorch-weight/resnet50_v1c.pth"
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
 criterion = nn.CrossEntropyLoss(reduction='mean', ignore_index=255)
 model = Network(
     config.num_classes, 
@@ -24,6 +25,8 @@ model = Network(
     pretrained_model=config.pretrained_model,
     norm_layer=torch.nn.BatchNorm2d
 ).to(device)
+state_dict = torch.load(cps_save_path)
+model.load_state_dict(state_dict["model"])
 
 def output_rearrange(output, num_classes):
     argmax_output = output[0][0].detach()[:, :, None]
