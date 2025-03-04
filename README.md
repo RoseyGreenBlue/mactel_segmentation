@@ -18,3 +18,4 @@ https://github.com/charlesCXK/TorchSemiSeg
 ###### git pull https://github.com/RoseyGreenBlue/mactel_segmentation.git 
 
 ## abstract link: https://iovs.arvojournals.org/article.aspx?articleid=2790110
+## paper link: https://tvst.arvojournals.org/article.aspx?articleid=2802212
